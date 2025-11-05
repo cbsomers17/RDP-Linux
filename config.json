@@ -1,0 +1,26 @@
+{
+    "server": {
+        "host": "0.0.0.0",
+        "port": 3389,
+        "max_connections": 10,
+        "timeout": 300
+    },
+    "security": {
+        "require_auth": true,
+        "session_timeout": 3600,
+        "max_login_attempts": 3,
+        "allowed_commands": ["ls", "pwd", "whoami", "date", "uname", "ps"],
+        "blocked_commands": ["rm", "del", "format", "shutdown", "reboot"]
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "rdp_host.log",
+        "max_size_mb": 10,
+        "backup_count": 3
+    },
+    "credentials": {
+        "admin": "admin123",
+        "user": "user123",
+        "guest": "guest123"
+    }
+}
